@@ -1,16 +1,11 @@
-# React + Vite
+![alt text](image.png)
+En esta tarea debiamos consumir una API dada por el docente, y plantear una carta de un restaurante usando los datos de esta mendiante el uso del Endpoint dado.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Valiendonos de la funcion fetch() de React, he creado una funcion async que ha llamado a los datos alojados en la API y devuelto los datos formateados.
 
-Currently, two official plugins are available:
+He creado 3 componentes en total, MenuList, que era el componente principal que contenia todos los platos, y MenuItem, que es cada tarjeta individual de cada plato. 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Mediante props he pasado los datos que he llamado de la api con mi funcion en App.jsx, primero he pasado el array entero a MenuList, y luego en MenuList he usado la funcion map() para recorrer el array pasando cada dato de cada plato individual para crear su tarjeta correspondiente y devolverla, creando asi la cuadricula. 
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+El tercer componente creado ha sido Navbar que me ha servido de ayuda para crear las dos funcionalidades extras, que son la de ordenar y la de busqueda por nombre. Mediante funciones callback he pasado los datos que introducía en la caja de busqueda del Navbar, para que al llamar yo a la función que consume la API, le pase un parametro extra, que sea el que me filtre la busqueda, asi que realmente cuando la funcion llame a la funcion solo le devuelve el array que cumpla los criterios de búsqueda.
+![alt text](image2.png)

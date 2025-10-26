@@ -20,6 +20,8 @@
 #navbar input {
     height: 30px;
     font-size: large;
+    background-color: white;
+    color: black;
 }
 
 #navbar img {
