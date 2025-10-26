@@ -12,9 +12,14 @@
     border-radius: 40px;
     height: 40px;
     width: 40px;
-    font-size: 10px;
-    word-break: break-word; 
+    font-size: 20px;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 #navbar input {
