@@ -17,3 +17,12 @@
     align-items: center;
 }
 
+.msgContainer {
+    height: 80dvh;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    background-color: rgba(235, 200, 154, 0.658);
+}

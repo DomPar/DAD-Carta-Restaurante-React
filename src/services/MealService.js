@@ -9,7 +9,7 @@ export default async function getData(searchTerm) {
 
         const result = await response.json();
 
-        const normalized = result.meals.map((meal) => ({
+        const data = result.meals.map((meal) => ({
             id: meal.idMeal,
             name: meal.strMeal,
             category: "Seafood",
@@ -19,9 +19,9 @@ export default async function getData(searchTerm) {
 
         if (searchTerm && searchTerm.trim() !== "") {
             const lower = searchTerm.toLowerCase();
-            return normalized.filter((item) => item.name.toLowerCase().includes(lower));
+            return data.filter((item) => item.name.toLowerCase().includes(lower));
             }
-        return normalized;
+        return data;
     } catch (error) {
         throw error; 
     }

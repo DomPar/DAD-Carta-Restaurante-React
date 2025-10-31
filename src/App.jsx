@@ -38,8 +38,8 @@ function App() {
     return (
         <div id='mainContainer'>
             <Navbar onSearchChange={setSearchTerm} onSort={handleSort} sortMode={sortMode}/>
-            {isLoading && <p>Loading...</p>}
-            {error && <p>Error: {error}</p>}
+            {isLoading && <div className='msgContainer'><h2>Cargando los datos...</h2></div>}
+            {error && <div className='msgContainer'><h2>Error: No se ha podido acceder a los datos de la carta.</h2></div>}
             {!isLoading && !error && (
                 <MenuList items={displayedItems} searchTerm={searchTerm}/>
             )}

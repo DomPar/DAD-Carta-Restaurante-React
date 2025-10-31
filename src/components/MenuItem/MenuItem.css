@@ -19,3 +19,9 @@
   display: block;
   border-radius: .4rem;
 }
+
+.menuItem:hover {
+  transform: scale(1.03);
+  transition: transform .3s ease-in-out;
+  box-shadow: 8px 8px 8px;
+}
